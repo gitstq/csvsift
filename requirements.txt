@@ -1,0 +1,5 @@
+# csvsift 运行时零强制依赖。
+# 导出 XLSX 时安装可选依赖：
+#   pip install openpyxl
+# 或安装完整功能包：
+#   pip install "csvsift[xlsx]"
