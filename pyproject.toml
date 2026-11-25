@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "csvsift"
+version = "1.0.0"
+description = "流式 CSV 命令行工具箱：零依赖、低内存、中文编码友好 / Streaming CSV CLI toolbox"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "gitstq" }]
+keywords = ["csv", "cli", "data", "streaming", "xlsx", "json", "工具"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: Chinese (Simplified)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Utilities",
+]
+
+[project.optional-dependencies]
+xlsx = ["openpyxl>=3.0"]
+
+[project.scripts]
+csvsift = "csvsift.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["csvsift*"]
